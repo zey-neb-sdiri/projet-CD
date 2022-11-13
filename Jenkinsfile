@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('build project / generate dist'){
       steps{
-        sh 'ng build'
+        sh 'ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yaml'
       }
     }
   }
