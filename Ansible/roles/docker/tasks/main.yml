@@ -2,7 +2,7 @@
 # tasks file for docker
     - name: create image docker
       docker_image:
-        name: devops
+        name: zeynebsd/project-cd
         build: 
           path: /var/lib/jenkins/workspace/livraison
           pull: no 
@@ -12,7 +12,7 @@
     - name: run container docker
       docker_container:
         name: app_container
-        image: devops:latest
+        image:  zeynebsd/project-cd:latest
         state: started
         recreate: true
         ports:
