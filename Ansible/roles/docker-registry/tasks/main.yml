@@ -1,2 +1,4 @@
 ---
-# tasks file for docker-registry
+- name: Push image to DockerHub 
+  become: yes
+  shell: docker push zeynebsd/project-cd:latest
