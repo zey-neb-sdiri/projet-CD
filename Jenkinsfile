@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage('build'){
+    stage('build project / generate dist'){
       steps{
-        sh 'echo test'
+        sh 'ng build'
       }
     }
   }
