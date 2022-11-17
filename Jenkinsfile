@@ -16,7 +16,7 @@ pipeline{
         sh 'npm install ; docker login ; ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yaml -e "ansible_become_password=toor"'
       }
     }
-    stage('start grafna container'){
+    /*stage('start grafna container'){
       steps{
         sh 'npm install ; docker login ; ansible-playbook Ansible/grafana.yml -i Ansible/inventory/host.yaml -e "ansible_become_password=toor"'
       }
@@ -25,7 +25,7 @@ pipeline{
       steps{
         sh 'npm install ; docker login ; ansible-playbook Ansible/prometheus.yml -i Ansible/inventory/host.yaml -e "ansible_become_password=toor"'
       }
-    }
+    }*/
   }
   post {
      always{
