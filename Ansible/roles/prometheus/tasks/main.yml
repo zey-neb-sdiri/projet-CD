@@ -1,2 +1,11 @@
+
 ---
 # tasks file for prometheus
+ - name: run container prometheus
+   docker_container:
+     name: prometheus_container
+     image: prom/prometheus
+     state: started
+     recreate: true
+     ports:
+      - "9090:9090"
