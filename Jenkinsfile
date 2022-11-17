@@ -21,6 +21,11 @@ pipeline{
         sh 'npm install ; docker login ; ansible-playbook Ansible/grafana.yml -i Ansible/inventory/host.yaml -e "ansible_become_password=toor"'
       }
     }
+     stage('start prometheus container'){
+      steps{
+        sh 'npm install ; docker login ; ansible-playbook Ansible/prometheus.yml -i Ansible/inventory/host.yaml -e "ansible_become_password=toor"'
+      }
+    }
   }
   post {
      always{
