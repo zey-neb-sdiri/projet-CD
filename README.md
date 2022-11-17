@@ -1,6 +1,8 @@
 # Projet
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+## Pipeline Status: 
+[![Build Status](http://127.0.0.1:8080/buildStatus/icon?job=livraison)](http://127.0.0.1:8080/job/livraison/)
 
 ## Development server
 
