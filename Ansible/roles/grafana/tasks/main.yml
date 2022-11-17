@@ -1,10 +1,10 @@
 ---
 # tasks file for grafana
  - name: run container grafana
-      docker_container:
-        name: grafana_container
-        image:  grafana/grafana-oss
-        state: started
-        recreate: true
-        ports:
-         - "3000:3000"
+   docker_container:
+     name: grafana_container
+     image:  grafana/grafana-oss
+     state: started
+     recreate: true
+     ports:
+      - "3000:3000"
